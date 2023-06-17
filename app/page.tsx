@@ -4,6 +4,7 @@ import Color from "color";
 import AnalogousColor from "./components/analogousColors";
 import MonochromaticColors from "./components/MonochromaticColors";
 import TriadicColors from "./components/TriadicColors";
+import TetradicColors from "./components/TetradicColors";
 
 export default function Home() {
   const [primaryColor, setPrimaryColor] = useState(Color("#000000"));
@@ -24,6 +25,7 @@ export default function Home() {
       <AnalogousColor color={primaryColor} />
       <MonochromaticColors color={primaryColor} />
       <TriadicColors color={primaryColor} />
+      <TetradicColors color={primaryColor} />
     </div>
   );
 }
