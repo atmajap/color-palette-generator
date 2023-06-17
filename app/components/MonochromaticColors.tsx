@@ -1,23 +1,23 @@
 import Color from "color";
 
-const AnalogousColors = (props: Color) => {
+const MonochromaticColors = (props: Color) => {
   return (
     <div>
-      <p className="text-xl m-4">Analogous Colors</p>
+      <p className="text-xl m-4">Monochromatic Colors</p>
       <div className="flex flex-row m-4">
         <div className="flex flex-col w-full">
           <div
             className="w-full p-4"
-            style={{ backgroundColor: props.color.rotate(-60) }}
+            style={{ backgroundColor: props.color.darken(0.25) }}
           ></div>
-          <div>{props.color.rotate(-60).hex().toString()}</div>
+          <div>{props.color.darken(0.25).hex()}</div>
         </div>
         <div className="flex flex-col w-full">
           <div
             className="w-full p-4"
-            style={{ backgroundColor: props.color.rotate(-30) }}
+            style={{ backgroundColor: props.color.darken(0.125) }}
           ></div>
-          <div>{props.color.rotate(-30).hex()}</div>
+          <div>{props.color.darken(0.125).hex()}</div>
         </div>
         <div className="flex flex-col w-full">
           <div
@@ -29,20 +29,20 @@ const AnalogousColors = (props: Color) => {
         <div className="flex flex-col w-full">
           <div
             className="w-full p-4"
-            style={{ backgroundColor: props.color.rotate(30) }}
+            style={{ backgroundColor: props.color.lighten(0.125) }}
           ></div>
-          <div>{props.color.rotate(30).hex()}</div>
+          <div>{props.color.lighten(0.125).hex()}</div>
         </div>
         <div className="flex flex-col w-full">
           <div
             className="w-full p-4"
-            style={{ backgroundColor: props.color.rotate(60) }}
+            style={{ backgroundColor: props.color.lighten(0.25) }}
           ></div>
-          <div>{props.color.rotate(60).hex()}</div>
+          <div>{props.color.lighten(0.25).hex()}</div>
         </div>
       </div>
     </div>
   );
 };
 
-export default AnalogousColors;
+export default MonochromaticColors;
