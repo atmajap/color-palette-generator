@@ -3,6 +3,7 @@ import { useState } from "react";
 import Color from "color";
 import AnalogousColor from "./components/analogousColors";
 import MonochromaticColors from "./components/MonochromaticColors";
+import TriadicColors from "./components/TriadicColors";
 
 export default function Home() {
   const [primaryColor, setPrimaryColor] = useState(Color("#000000"));
@@ -22,6 +23,7 @@ export default function Home() {
       </div>
       <AnalogousColor color={primaryColor} />
       <MonochromaticColors color={primaryColor} />
+      <TriadicColors color={primaryColor} />
     </div>
   );
 }
